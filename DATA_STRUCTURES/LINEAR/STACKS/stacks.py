@@ -65,4 +65,5 @@ def main():
     s1.pop()
     s1.print()
 
-main()
+if __name__ == "__main__":
+    main()
