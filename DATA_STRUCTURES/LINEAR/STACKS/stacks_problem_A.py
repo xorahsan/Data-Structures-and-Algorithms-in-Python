@@ -10,7 +10,7 @@ def main():
     pos = int(input())
     s = s[pos:]
 
-    ind = 0
+    index = 0
     st = STACK()
     for i in s:
         if i == "[":
@@ -18,8 +18,8 @@ def main():
         if i == "]":
             st.pop()
             if st.isEmpty():
-                print(pos+ind)
+                print(pos+index)
                 break
-        ind+=1
+        index+=1
 
 main()
