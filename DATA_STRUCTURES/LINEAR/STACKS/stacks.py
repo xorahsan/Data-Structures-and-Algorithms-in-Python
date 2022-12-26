@@ -27,7 +27,7 @@ class Stack:
     def pop(self):
         if self.data == []:
             return print("STACK is empty")
-        return self.data.pop(0)
+        return self.data.pop()
 
     def print(self):
         print(*self.data)
@@ -37,6 +37,9 @@ class Stack:
 
     def size(self):
         return len(self.data)
+
+    def top(self):
+        return self.data[-1]
 
 def main():
 
