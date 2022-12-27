@@ -1,4 +1,4 @@
-# Problem: Evaluate Postfix Expression
+# Problem: Evaluate Prefix Expression
 
 import stacks
 Stack = stacks.Stack
@@ -29,7 +29,8 @@ def calc(a,b,s):
         return b ** a
 
 def main():
-    expression = list(map(convert, list("123+*8-")))
+    expression = list(map(convert, list("-+7*45+20")))
+    expression = expression[::-1]
     operands = Stack()
 
     for i in expression:
@@ -38,7 +39,7 @@ def main():
         else:
             a = operands.pop()
             b = operands.pop()
-            temp = calc(a, b, i)
+            temp = calc(b, a, i)
             operands.push(temp)
     
     print(operands.top())
