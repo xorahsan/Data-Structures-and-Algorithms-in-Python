@@ -33,7 +33,7 @@ class Stack:
         print(*self.data)
 
     def isEmpty(self):
-        return True if self.data == [] else False
+        return self.data == [] 
 
     def size(self):
         return len(self.data)
