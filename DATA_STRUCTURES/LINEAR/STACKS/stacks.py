@@ -8,13 +8,11 @@ Class variables:
     data: a list contains all items pushed in stack
     
 Methods:
-__getitem__(): index operator e.g print(x[5])
-__setitem__(): change value by index e.g x[5] = 55
-__delitem__(): delete operator
-insert(): insert into array 
-pop(): remove and return last element
-pop(int): remove and return given index element
-print(): print the array
+push(): insert into top of stack
+pop(): remove and return top element of stack
+print(): print the stack
+isEmpty(): return True if Stack is empty else return False
+top(): return top element of stack
 """
 
 class Stack:
