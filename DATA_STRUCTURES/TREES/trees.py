@@ -1,4 +1,23 @@
 
+"""
+=================== Regular Trees ===================
+Insertion Complexity: O(1)
+Deletion Complexity: O(n)
+Best for Heirarchal Structures
+Each and every node is tree node itself
+Each tree node has three class variables:
+    parent: parent of current tree node
+    data: the data in current tree node
+    childern: [array] array of all childern (each child is tree node itself)
+Methods:
+addChild(data): add child to self
+getLevel(): return level self
+print(): print all tree nodes in heirarchical order
+print(level=1): print tree until given level
+print(level='HR'): print tree of given node name
+getRoot(): return main root node of tree
+getParent(data): get parent node of given data (if exist)
+"""
 
 class Tree:
     def __init__(self, data):
@@ -25,9 +44,16 @@ class Tree:
         if not self.parent: return self.data
         return self.parent.getRoot()
 
-    def getParent(self):
-        if not self.parent: return "ALREADY ON ROOT NODE"
-        return self.parent.data
+    def getParent(self, item):
+        if self.child == []: return
+        
+        for i in self.child:
+            if i.data == item: return i.parent.data
+            temp = i.getParent(item)
+            if temp: return temp
+
+        if item == self.getRoot(): return "ALREADY ON ROOT NODE"
+
 
     def print(self,level_name = None,level = None):
         if not level_name and not level and level != 0: print(self.getLevel() *"    ",'->',self.data)
@@ -78,9 +104,12 @@ def main():
     print(root.search("WEDNESDAY"))
     print(root.getRoot())
     print(wednesday.getRoot())
-    print(wednesday.getParent())
-    print(it.getParent())
-    print(root.getParent())
+    print("===================")
+    print(root.getParent("WEDNESDAY"))
+    print(root.getParent("IT"))
+    print(root.getParent("CEO"))
+
+
 
 if __name__ == "__main__":
     main()
