@@ -11,15 +11,17 @@ Node class Variables:
     value: value of current node
     next: whole next Node
 
-Singly Linked List class variables:
-    head: the whole node of current singly linked list head
+Circular Singly List class variables:
+    head: the whole node of current circular singly linked list head
 
 
-Singly Linked List Methods:
+Circular Singly Linked List Methods:
 
 insertAtBegin(data) # insert Node at start
 
 printAll() # print every element of current linked list
+
+print(reverse=True) #print doubly linked list in reverse order
 
 length() # return length of current Linked List
 
@@ -75,11 +77,6 @@ class CircularSinglyLinkedList:
             i.next = self.head.next
             self.head = self.head.next
             return
-        # elif ind == self.length()-1:
-        #     i = self.head
-        #     while i.next.next != self.head: i = i.next
-        #     i.next = self.head
-        #     return
 
         i,j = 0,self.head
         while i < ind-1: i,j = i+1,j.next

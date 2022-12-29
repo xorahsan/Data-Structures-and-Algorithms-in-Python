@@ -8,11 +8,11 @@ Class variables:
     data: a list contains all items pushed in Queue
     
 Methods:
-push(): insert into top of stack
-pop(): remove and return top element of stack
-print(): print the stack
-isEmpty(): return True if Stack is empty else return False
-top(): return top element of stack
+enQueue(): insert into queue
+deQueue(): remove and return front of queue
+print(): print the queue
+isEmpty(): return True if Queue is empty else return False
+front(): return front element of queue
 """
 
 class Queue:

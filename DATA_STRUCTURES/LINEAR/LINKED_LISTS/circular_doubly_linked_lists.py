@@ -10,16 +10,19 @@ Deletion Time Complexity: O(n)
 Node class Variables:
     value: value of current node
     next: whole next Node
+    prev: whole previous node
 
-Singly Linked List class variables:
-    head: the whole node of current singly linked list head
+Circular Doubly List class variables:
+    head: the whole node of current circular doubly linked list head
 
 
-Singly Linked List Methods:
+Circular Doubly Linked List Methods:
 
 insertAtBegin(data) # insert Node at start
 
 printAll() # print every element of current linked list
+
+print(reverse=True) #print doubly linked list in reverse order
 
 length() # return length of current Linked List
 
@@ -30,6 +33,7 @@ insertAt(index, data) # insert Node at the given index
 removeAt(index) #remove Node by Index
 
 find(data) #return index of first occurence of given value
+
 
 """
 
@@ -166,4 +170,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
