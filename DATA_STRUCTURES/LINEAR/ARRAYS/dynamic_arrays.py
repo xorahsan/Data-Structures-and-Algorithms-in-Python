@@ -1,6 +1,6 @@
 """
-====================== Arrays =================
-Insertion Complexity: O(1)
+====================== Dynamic Arrays =================
+Insertion Complexity: O(n)
 traversing: O(n)
 searching: O(n)
 
